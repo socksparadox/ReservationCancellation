@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Results Page</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIgAAACICAMAAAALZFNgAAAAyVBMVEX////8sECIiIkxMTMqKizGx8mVlphubnDR0dI/QkE4Nzv/vD78/Pz09PQ4ODrX19dPT1H/tkD1slDq6uscHCBGRkgjIyY/P0H/uT9HREP3sUn5sUV8fH1nZ2gAAAB1dXa6urpYWFsWFhmwsLApMjwwOUPFkUNTS0L/wj+yhEU4PEIkMkIiKziHaULmpUDh4eKjo6NvXETOl0KScUUgLEBmVkR7YkaVdEAPKkN7bE09R1fan0PWolR5Z1ZIT1nDlEy2lWJiW1UAH0YvyHKzAAAD2klEQVR4nO2Za5uiNhSABSJaCpGg3HVFx+gaHe+X7TIzrf3/P6oJM53xEXbXqQT74byPDwKKeTk5gUOs1QAAAAAAAAAAAAAAAAAAkE23e2+DVyxNs+7tkGFhfDcR87zlCxHLrFCk96X9I5H2l16FIl3U/9gwEToLQh9VmbpLjOofW/XzdYSXFYrUVsguTFDLRqsqPWo13KkX7a53cLUetaZeHBG9WbEI8L/CLLpmWu2Moowp/H4Z9Owk99Nt94325SdmYsu6xg48r9G6FBkOO77fGQ4vRVoNzxtIEqk9uGio5/YW3n31IXIfZHnwNlXcz+8sEuljVW5tsMz/vIlxPiutSu84wqLba/h+o9etsgopouUZI0pHhneZxZWLaOGYE2r3F5l8DYKvk3uLmE0jnHJCo3nPJGnqPczYjMMY7t2rAljqBprvwv3hcbt9POzD2RwZetWDVlRA/pyFx80iVggJiBIvNseQzV09d88pm5bgPQ/qGH07jAkhCmeRphEJAkLGf3x3/fcS0swOKdtD9TRN66ivG1YXzdZpJiGgHLaepgpxnp5fvO7bxVft8EM8tWSRxLVt201ePewRnSofHMKQsdHMX//pOM5fVHsr8M8PKZus1Fm6o/AjHBwSKHE6PfDB88xV0nDkSs5Z0xTPtdxjH/Hmo5gv4li8xApxnONk9rKNFWdPhYm0+ow/eVtcxBrQkxNFiiMWsSPgJuItitLjC907sXNitim+Lc2DR8RUjYloM46EgWheCEXZehSRp8l3+0mYdGWK8LOsJZilvHnedBw7WftcSWwp3INvLZ5ZmMYpw4kpa35CnKJlDdiUiDhkAchE+FK8i75yuI1zoqc4mlKbB0SSi+gbnZ0C0RFOlh6xEMryhGdv1kc8PmnItlE0YbpIE1kJa3lsk40R5ceQlNIN2TBPZs26QmvyE4c3k+NsT8ha5vyENdhtfunBTSgdk81uIC8kLW/ys045C8maxBOJZaw+317hoSip/y0m23n+WawsBqPxr1NEhGQ9mwZjKu2J0/Lp4qqIkOnskSyoLytJ6oYfXCWipH8flMA3CqfZSoCnyFU9w4kIT1lZSWIa9JrB+86GGnIurA9of83gfSfeIykTE21/d92Y+Rcy3uXnkUqgP1p/RkOwHuVnU25mhfzo908SsfJvOEnH93/7NL7fSUoWUTVsMOOTMANrZT/XmM3/yL1nkqTQXqk3sSppELc8dCPlVCZmQ+vdFpGe1igjUywXJ/WbSLBbRkFg8hPSb4KHtJSxU0fabSBUUmHSVBs3ocL/fAAAAAAAAAAAAAAAAAAAlM8/6xFnQ3FL7BIAAAAASUVORK5CYII=" rel="icon">
+  <link href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIgAAACICAMAAAALZFNgAAAAyVBMVEX////8sECIiIkxMTMqKizGx8mVlphubnDR0dI/QkE4Nzv/vD78/Pz09PQ4ODrX19dPT1H/tkD1slDq6uscHCBGRkgjIyY/P0H/uT9HREP3sUn5sUV8fH1nZ2gAAAB1dXa6urpYWFsWFhmwsLApMjwwOUPFkUNTS0L/wj+yhEU4PEIkMkIiKziHaULmpUDh4eKjo6NvXETOl0KScUUgLEBmVkR7YkaVdEAPKkN7bE09R1fan0PWolR5Z1ZIT1nDlEy2lWJiW1UAH0YvyHKzAAAD2klEQVR4nO2Za5uiNhSABSJaCpGg3HVFx+gaHe+X7TIzrf3/P6oJM53xEXbXqQT74byPDwKKeTk5gUOs1QAAAAAAAAAAAAAAAAAAkE23e2+DVyxNs+7tkGFhfDcR87zlCxHLrFCk96X9I5H2l16FIl3U/9gwEToLQh9VmbpLjOofW/XzdYSXFYrUVsguTFDLRqsqPWo13KkX7a53cLUetaZeHBG9WbEI8L/CLLpmWu2Moowp/H4Z9Owk99Nt94325SdmYsu6xg48r9G6FBkOO77fGQ4vRVoNzxtIEqk9uGio5/YW3n31IXIfZHnwNlXcz+8sEuljVW5tsMz/vIlxPiutSu84wqLba/h+o9etsgopouUZI0pHhneZxZWLaOGYE2r3F5l8DYKvk3uLmE0jnHJCo3nPJGnqPczYjMMY7t2rAljqBprvwv3hcbt9POzD2RwZetWDVlRA/pyFx80iVggJiBIvNseQzV09d88pm5bgPQ/qGH07jAkhCmeRphEJAkLGf3x3/fcS0swOKdtD9TRN66ivG1YXzdZpJiGgHLaepgpxnp5fvO7bxVft8EM8tWSRxLVt201ePewRnSofHMKQsdHMX//pOM5fVHsr8M8PKZus1Fm6o/AjHBwSKHE6PfDB88xV0nDkSs5Z0xTPtdxjH/Hmo5gv4li8xApxnONk9rKNFWdPhYm0+ow/eVtcxBrQkxNFiiMWsSPgJuItitLjC907sXNitim+Lc2DR8RUjYloM46EgWheCEXZehSRp8l3+0mYdGWK8LOsJZilvHnedBw7WftcSWwp3INvLZ5ZmMYpw4kpa35CnKJlDdiUiDhkAchE+FK8i75yuI1zoqc4mlKbB0SSi+gbnZ0C0RFOlh6xEMryhGdv1kc8PmnItlE0YbpIE1kJa3lsk40R5ceQlNIN2TBPZs26QmvyE4c3k+NsT8ha5vyENdhtfunBTSgdk81uIC8kLW/ys045C8maxBOJZaw+317hoSip/y0m23n+WawsBqPxr1NEhGQ9mwZjKu2J0/Lp4qqIkOnskSyoLytJ6oYfXCWipH8flMA3CqfZSoCnyFU9w4kIT1lZSWIa9JrB+86GGnIurA9of83gfSfeIykTE21/d92Y+Rcy3uXnkUqgP1p/RkOwHuVnU25mhfzo908SsfJvOEnH93/7NL7fSUoWUTVsMOOTMANrZT/XmM3/yL1nkqTQXqk3sSppELc8dCPlVCZmQ+vdFpGe1igjUywXJ/WbSLBbRkFg8hPSb4KHtJSxU0fabSBUUmHSVBs3ocL/fAAAAAAAAAAAAAAAAAAAlM8/6xFnQ3FL7BIAAAAASUVORK5CYII=" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="static/vendor/animate.css/animate.min.css" rel="stylesheet">
+  <link href="static/vendor/aos/aos.css" rel="stylesheet">
+  <link href="static/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="static/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="static/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="static/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="static/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="static/css/style.css" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: Restaurantly
+  * Updated: Mar 10 2023 with Bootstrap v5.2.3
+  * Template URL: https://bootstrapmade.com/restaurantly-restaurant-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body>
+
+  <!-- ======= Top Bar ======= -->
+  <div id="topbar" class="d-flex align-items-center fixed-top">
+    <div class="container d-flex justify-content-center justify-content-md-between">
+
+      <div class="contact-info d-flex align-items-center">
+        <i class="bi bi-phone d-flex align-items-center"><span>+91 5589 55488 55</span></i>
+        <i class="bi bi-clock d-flex align-items-center ms-4"><span>hotel@domain.com</span></i>
+      </div>
+
+      <div class="languages d-none d-md-flex align-items-center">
+        <ul>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top d-flex align-items-cente">
+    <div class="container-fluid container-xl d-flex align-items-center justify-content-lg-between">
+
+      <h1 class="logo me-auto me-lg-0"><a href="index.html">Reservation Cancellation Prediction</a></h1>
+      <!-- Uncomment below if you prefer to use an image logo -->
+      <!-- <a href="index.html" class="logo me-auto me-lg-0"><img src="static/img/logo.png" alt="" class="img-fluid"></a>-->
+
+      <nav id="navbar" class="navbar order-last order-lg-0">
+        <ul>
+          <li><a class="nav-link scrollto " href="/">Home</a></li>
+          <li><a class="nav-link scrollto" href="/">About</a></li>
+          <li><a class="nav-link scrollto" href="/">Contact</a></li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+      <a href="/details" class="book-a-table-btn scrollto d-none d-lg-flex">Predict</a>
+
+    </div>
+  </header><!-- End Header -->
+
+  <main id="main">
+    <section class="breadcrumbs">
+      <div class="container">
+
+        <div class="d-flex justify-content-between align-items-center">
+          <h2>Results</h2>
+          <ol>
+            <li><a href="/">Home</a></li>
+            <li><a href="/predict">Results</a></li>
+          </ol>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="inner-page">
+      <div class="container">
+        <p>Based on the inputs the model predicts that</p>
+
+          <h3 style="color:whitesmoke"><center>
+            {{ prediction_text }}
+          </center></h3>
+      </div>
+    </section>
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-lg-3 col-md-6">
+            <div class="footer-info">
+              <h3>Reservation Cancellation Prediction</h3>
+              <p>
+                A108 Adam Street <br>
+                MH 411048, India<br><br>
+                <strong>Phone:</strong> +91 5589 55488 55<br>
+                <strong>Email:</strong> hotel@domain.com<br>
+              </p>
+              <div class="social-links mt-3">
+                <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
+                <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
+                <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
+                <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
+                <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-2 col-md-6 footer-links">
+            <h4>Useful Links</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="/">Home</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="/">About us</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="/">Terms of service</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="/">Privacy policy</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-links">
+            <h4>Our Services</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Data Analytics</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Web Development</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Product Management</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Machine Learning</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-4 col-md-6 footer-newsletter">
+            <h4>Our Newsletter</h4>
+            <p>Subscribe to our newsletter to stay updated.</p>
+            <form action="" method="post">
+              <input type="email" name="email"><input type="submit" value="Subscribe">
+            </form>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="copyright">
+        &copy; Copyright <strong><span>Reservation Cancellation Prediction</span></strong>. All Rights Reserved
+      </div>
+    </div>
+  </footer><!-- End Footer -->
+
+  <div id="preloader"></div>
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="static/vendor/aos/aos.js"></script>
+  <script src="static/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="static/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="static/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="static/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="static/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="static/js/main.js"></script>
+
+</body>
+
+</html>
